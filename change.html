@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Change Map</title>
+		<link rel="shortcut icon" href="img/logo.png">
+		<link rel="stylesheet" href="css/change.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/change/changeinput.js"></script>
+		<script type="text/javascript" src="js/change/changemap.js"></script>
+		<script type="text/javascript" src="js/change/changeindex.js"></script>
+		<script type="text/javascript" src="js/change/changeoutput.js"></script>
+	</head> 
+	</body>
+	   <div id="head">
+	  	 <div id="name">
+	  	   	<p>Change Map</p>
+	  	   	<a href="index.html">首页</a>
+	  	   	<a href="change.html">转换</a>
+	  	   	<a href="filter.html">分类</a>
+	  	 </div>
+			<div id="change_body">
+				<div id="input_text">
+					<div id="input_text_content">
+						<textarea id="textarea_input_text" class="textarea_body"></textarea>
+						<div class="change_button_body">
+							<input type="file" id="change_files" style="display: none" onchange="fileImportchange();">
+							<div id="input_text_button" class="change_button">
+								<p>上传</p> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="change_button">
+					<div id="change_button_content">
+						<div id="select_changetype_body">
+							<div id="select_changetype_div">
+								<select id="select_changetype">
+									<option value="bd09togcj02" selected="selected">百度转火星坐标系(高德)</option>
+									<option value="gcj02tobd09">火星坐标系(高德)转百度</option>
+									<option value="wgs84togcj02">WGS84转火星坐标系</option>
+									<option value="gcj02towgs84">火星坐标系转WGS84</option>
+									<option value="wgs84tobd09">WGS84转百度</option>
+									<option value="bd09towgs84">百度转WGS84</option>
+								</select>
+							</div>
+						</div>
+						<div id="change_button_body">
+							<div id="change_text_button" class="change_button">
+								<p>转换</p> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="outpot_text">
+					<div id="outpot_text_content">
+						<textarea id="textarea_outpot_text" class="textarea_body"></textarea>
+						<div class="change_button_body">
+							<div id="outpot_text_button" class="change_button">
+								<p>下载</p> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	</body>
+</html>

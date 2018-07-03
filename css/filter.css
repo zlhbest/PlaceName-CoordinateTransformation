@@ -1,0 +1,152 @@
+html
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#head
+{
+	width: 100%;
+	height: 70px;
+	background-color: darkgray;
+}
+/*头部*/
+#name
+{
+	width: 30%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+#name p
+{
+	margin: 20px;
+	color: azure;
+	font-style: oblique;
+	font-size:26px;
+}
+#name a
+{
+	margin: 20px;
+	color: azure;
+	font-style: oblique;
+	font-size:15px;
+}
+#filter_body
+{
+	width: 100%;
+	height:800px;
+	background-color: #204D74;
+}
+#input_filter
+{
+	width: 100%;
+	height: 30%;
+	background-color: #1296DB;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+#textarea_filter
+{
+	width: 90%;
+	height: 98%;
+	background-color:#C4E3F3;
+	resize: none;
+}
+#button_input
+{
+	width: 10%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 30px;
+}
+.button p
+{
+	color: white;
+	align-content: center;
+	margin: 5px;
+}
+
+.button
+{
+	width: 70px;
+	height: 35px;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: white;
+	border-style: solid;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.button:hover
+{
+	cursor:pointer;
+}
+#change
+{
+	width: 100%;
+	height: 10%;
+	background-color: #31B0D5;
+	display: flex;
+	justify-content: center;
+}
+#output_filter
+{
+	width: 100%;
+	height: 60%;
+	background-color: #337AB7;
+	display: flex;
+	flex-direction: row;
+}
+.output
+{
+	width: 50%;
+	height: 100%;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: white;
+	border-style: solid;
+}
+.output_textarea
+{
+	margin: 20px;
+	width: 90%;
+	height: 80%;
+	background-color: #5BC0DE;
+	resize: none;
+}
+.output_button_filter
+{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+}
+#change_button
+{
+	width: 5%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#pgdiv
+{
+	width: 35%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+#pg
+{
+	margin: 30px;
+	width: 100%;
+	height: 20%;
+}

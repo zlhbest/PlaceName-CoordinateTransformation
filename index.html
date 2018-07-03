@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Change Map</title>
+		
+		
+		<link rel="shortcut icon" href="img/logo.png">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-table.css" />
+		
+		
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SAsXdGNK9FWdUnRn1aBBlrbTXEtC5bnr"></script>
+		<script src="http://webapi.amap.com/maps?v=1.4.7&key=aae201d351c543a067a51884d5c5c884&plugin=AMap.Geocoder,AMap.OverView,AMap.ToolBar"></script>
+		<script type="text/javascript" src="http://api.tianditu.com/js/maps.js"></script> 
+		<script type="text/javascript" src="http://api.tianditu.com/js/service.js"></script>
+		<script type="text/javascript" src="js/index/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/index/bootstrap-table.js"></script>
+		<script src="js/index/point.js" type="text/javascript"></script>
+		
+		<script src="js/index/map.js" type="text/javascript"></script>
+		
+		<script src="js/index/output.js" type="text/javascript"></script>
+		
+		<script src="js/index/change.js" type="text/javascript"></script>
+		
+		<script src="js/index/getXYFromMap.js" type="text/javascript"></script>
+		
+		<script src="js/index/getNameFromMap.js" type="text/javascript"></script>
+		
+		<script src="js/index/table.js" type="text/javascript"></script>
+		
+		
+		<script src="js/index/input.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<div id="head">
+			<div id="name">
+				<p>Change Map</p>
+				<a href="index.html">首页</a>
+				<a href="change.html">转换</a>
+				<a href="filter.html">分类</a>
+			</div>
+		</div>
+		<div id="web_body">
+			<div id="input">
+				<div id="input_name">
+					<div id="name_write">
+						<p>请输入地名</p>
+						<textarea class="input_textarea" id="textarea_name_write"></textarea>
+						<div class="name_write_button">
+							<div class="location">
+								<div class="download" id="download_name_write">
+									<img class="img" src="img/download.png">
+									<p>下载</p>
+								</div>
+							</div>
+							<div class="location">
+								<div class="change" id="change_name_write">
+									<img class="img" src="img/change.png">
+									<p>转换</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="name_text">
+						<p>请上传地名文件</p>
+						<textarea class="input_textarea" id="textarea_name_text"></textarea>
+						<div class="name_write_button">
+							<div class="location">
+								<div class="upload" id="name_upload">
+									<input type="file" id="name_files" style="display: none" onchange="fileImportname();">
+									<img class="img" src="img/upload.png">
+									<p>上传</p>
+								</div>
+							</div>
+							<div class="location">
+								<div class="change" id="change_name_text">
+									<img class="img" src="img/change.png">
+									<p>转换</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div id="input_location">
+					<div id="location_write">
+						<p>请输入坐标</p>
+						<textarea class="input_textarea" id="textarea_location_write"></textarea>
+						<div class="name_write_button">
+							<div class="location">
+								<div class="download" id="download_locaton_write"> 
+									<img class="img" src="img/download.png">
+									<p>下载</p>
+								</div>
+							</div>
+							<div class="location">
+								<div class="change" id="change_location_write">
+									<img class="img" src="img/change.png">
+									<p>转换</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="location_text">
+						<p>请上传坐标文件</p>
+						<textarea class="input_textarea" id="textarea_location_text"></textarea>
+						<div class="name_write_button">
+							<div class="location">
+								<div class="upload" id="coo_upload">
+									 <input type="file" id="coo_files" style="display: none" onchange="fileImportcoo();">
+									<img class="img" src="img/upload.png">
+									<p>上传</p>
+								</div>
+							</div>
+							<div class="location">
+								<div class="change" id="change_locatiuon_text">
+									<img class="img" src="img/change.png">
+									<p>转换</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="output">
+				<div id="out_text">
+					<div id="success">
+						<div id="success_table">
+							<p>转换成功</p>
+							<table  id="suc_table"></table>
+						</div>
+						<div id="success_button">
+							<div id="output_text">
+								<p>输出txt</p>
+							</div>
+							<div id="success_clear">
+								<p>清空</p>
+							</div>
+						</div>	
+					</div>
+					<div id="error">
+						<div id="error_table">
+						<p>转换失败</p>
+							<table  id="err_table"></table>
+						</div>
+						<div id="error_button">
+							<div id="error_angin">
+								<p>重试</p>
+							</div>
+							<div id="error_clear">
+								<p>清空</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<!--存放地图-->
+				<div id="map">
+					<div id="choose">
+						<p>选择转换平台：</p>
+						<div id="div">
+							<p style="margin:5px;"></p>
+							<div id="radio">
+								<input type="radio" name="choose_radio" value="gaode" checked="">高德地图&nbsp;&nbsp;  
+								<input type="radio" name="choose_radio"  value="baidu">百度地图&nbsp;&nbsp;    
+								<input type="radio" name="choose_radio"  value="tian">天地图&nbsp;&nbsp;    
+							</div>
+						</div>
+					</div>
+					<div id="allmap"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

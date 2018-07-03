@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Change Map</title>
+		<link rel="shortcut icon" href="img/logo.png">
+		<link rel="stylesheet"href="css/filter.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script src="js/filter/filter.js" type="text/javascript"></script>
+		<script src="js/filter/filterinput.js" type="text/javascript"></script>
+		<script src="js/filter/filteroutput.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="head">
+			<div id="name">
+				<p>Change Map</p>
+				<a href="index.html">首页</a>
+				<a href="change.html">转换</a>
+				<a href="filter.html">分类</a>
+			</div>
+		</div>
+		<div id="filter_body">
+			<div id="input_filter">
+				<textarea id="textarea_filter"></textarea>
+				<div id="button_input">
+					<input type="file" id="filter_files" style="display: none" onchange="fileImportfilter();">
+					<div class="button" id="input_filter_button">
+						<p>上传</p>
+					</div>
+				</div>
+			</div>
+			<div id="change">
+				<div id="change_button">
+					<div class="button" id="change_filter">
+						<p>分类</p>
+					</div>
+				</div>
+				<div id="pgdiv">
+					<progress max="100" value="0" id="pg"></progress>
+				</div>
+			</div>
+			<div id="output_filter">
+				<div id="name_output_filter" class="output">
+					<textarea id="textarea_name_output_filter" class="output_textarea">
+						
+					</textarea>
+					<div id="output_name_filter" class="output_button_filter">
+						<div class="button" id="output_button_name_filter">
+							<p>下载</p>
+						</div>
+					</div>
+				</div>
+				<div id="location_output_filter" class="output">
+					<textarea id="textarea_location_output_filter" class="output_textarea">
+						
+					</textarea>
+					<div id="output_location_filter" class="output_button_filter">
+						<div class="button" id="output_button_location_filter">
+							<p>下载</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>

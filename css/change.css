@@ -1,0 +1,176 @@
+html
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#head
+{
+	width: 100%;
+	height: 70px;
+	background-color: darkgray;
+}
+/*头部*/
+#name
+{
+	width: 30%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+#name p
+{
+	margin: 20px;
+	color: azure;
+	font-style: oblique;
+	font-size:26px;
+}
+#name a
+{
+	margin: 20px;
+	color: azure;
+	font-style: oblique;
+	font-size:15px;
+}
+#change_body
+{
+	width: 100%;
+	height: 765px;
+	background-color: #1296DB;
+	display: flex;
+	flex-direction: row;
+}
+#input_text
+{
+	width: 40%;
+	height: 100%;
+}
+#input_text_content
+{
+	margin: 20px;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	background-color: #E6E6E6;
+	display: flex;
+	flex-direction: column;
+}
+.textarea_body
+{
+	margin: 20px;
+	width: 90%;
+	height: 85%;
+	background-color: antiquewhite;
+	resize: none;
+}
+.change_button_body
+{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+}
+.change_button p
+{
+	color: #1296DB;
+	align-content: center;
+	margin: 5px;
+}
+
+.change_button
+{
+	width: 70px;
+	height: 35px;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: #1296DB;
+	border-style: solid;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.change_button:hover
+{
+	cursor:pointer;
+}
+#change_button
+{
+	width: 20%;
+	height: 100%;
+}
+#select_changetype_body
+{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+}
+#select_changetype_div
+{
+	margin-top: 100px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    position: relative;
+}
+#select_changetype
+{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 30px;
+}
+#select_changetype_div:after
+{
+	content: "";
+    width: 14px;
+    height: 8px;
+    background:url(../img/xiala.png) no-repeat center;
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    pointer-events: none;
+}
+#change_button_body
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+#change_button_content
+{
+	margin: 20px;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	background-color: #E6E6E6;
+}
+#outpot_text
+{
+	width: 40%;
+	height: 100%;
+}
+#outpot_text_content
+{
+	margin: 20px;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	background-color: #E6E6E6;
+}
